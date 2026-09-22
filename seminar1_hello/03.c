@@ -1,9 +1,9 @@
 #include <stdio.h>
 int main()
 {
-    int a;
+    int a = 0;
     scanf("%i", &a);
-    if (a >= 0 and a <= 20) or (a > 100 and a < 200)
+    if (a >= 0 && a <= 20 || a > 100 && a < 200 && a % 2)
         printf("Yes");
     else
         printf("No");
