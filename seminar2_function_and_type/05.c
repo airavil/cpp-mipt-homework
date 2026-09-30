@@ -10,7 +10,7 @@ void print_binary (int n)
         i++;
     }
     for (int j = i - 1; j >= 0; j--)
-        printf("%d", binaryNum[j]);
+        printf("%i", binaryNum[j]);
 }
 int main()
 {
