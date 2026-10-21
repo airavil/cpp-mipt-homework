@@ -18,7 +18,7 @@ typedef struct library Library;
 
 void library_create(Library* p, int n)
 {
-    p -> books = malloc(n * sizeof(Book));
+    p -> books = (Book*)malloc(n * sizeof(Book));
     p -> number_of_books = n;
     for (int i = 0; i < n; i++)
         (p -> books)[i].title = NULL;
@@ -27,7 +27,7 @@ void library_create(Library* p, int n)
 void  library_set(Library a, int i, char* str, int pg, float pr)
 {
     free(a.books[i].title);
-    a.books[i].title = malloc((strlen(str) + 1)*sizeof(char));
+    a.books[i].title = (char*)malloc((strlen(str) + 1) * sizeof(char));
     strcpy(a.books[i].title, str);
     a.books[i].pages = pg;
     a.books[i].price = pr;
